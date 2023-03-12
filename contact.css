@@ -1,0 +1,37 @@
+.cont {
+    text-align: center;
+}
+
+.form {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 10px 100px 10px 100px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.f1 {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.submit {
+    width: 180px;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    text-indent: 10px;
+}
+.btn1{
+    margin-left: 530px;
+}
