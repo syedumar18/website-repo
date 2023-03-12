@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+    <!-- <form>
+        <h1 class="cont">Contact Us</h1>
+        <div class="form">
+            <br />
+            <label>Name</label><br />
+            <input class="f1" name="firna" type="text" id="first-name" placeholder="Enter Your Name"  />
+            <br /><br />
+
+            <label>City</label><br />
+            <input class="f1" name="citna" type="text" id="last-name" placeholder="Enter Your City"  />
+            <br />
+            <br />
+
+            <label>Email Address</label> <br />
+            <input class="f1" name="emadd" id="email" type="email" placeholder="Enter Your Email Address" />
+            <br /><br />
+
+            <label>Query / Comments</label> <br />
+            <input class="f1" name="quecom" type="text" placeholder=""/>
+            <br />
+            <br /><br />
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+            <br>
+            <br>
+            <button type="submit" id="getData" class="btn btn-primary">Search data</button>
+        </div>
+    </form> -->
+    <div class="col-md-6 form">
+        <h1 class="cont">Contact Us</h1>
+        <form>
+          <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" id="first-name" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" class="form-control" id="last-name" placeholder="City">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <br>
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+      <br>
+      <br>
+      <button type="submit" id="getData" class="btn btn1 btn-danger">Search data</button>      
+    <div class="col-md-6">
+        <table class="table table-striped" id='dataTbl'>
+          <thead>
+            <tr>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              <th scope="col">Serial</th>
+              <th scope="col">Name</th>
+              <th scope="col">City</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr> -->
+          </tbody>
+        </table>
+        </div>        
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDT4PtM9NPoDCVrOFhQFuCbIzj9E0RsiIg",
+    authDomain: "rahil-lab.firebaseapp.com",
+    projectId: "rahil-lab",
+    storageBucket: "rahil-lab.appspot.com",
+    messagingSenderId: "729585315756",
+    appId: "1:729585315756:web:d69007a52de3243afc5409"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  
+  // Get a reference to the database service
+  const database = getDatabase(app);
+
+  // write data
+  submit.addEventListener('click',(e) => {
+    var firstName = document.getElementById('first-name').value;  
+    var lastName = document.getElementById('last-name').value;  
+    var email = document.getElementById('email').value;  
+
+    const userId = push(child(ref(database), 'users')).key;
+   
+    set(ref(database, 'users/' + userId), {
+    firstName: firstName,
+    lastName: lastName,
+    email : email
+   });
+   alert('saved');
+  });
+
+  // read data
+  getData.addEventListener('click',(e) => {
+
+    $('#dataTbl td').remove();
+    var rowNum = 0; 
+    const dbRef = ref(database, 'users/');
+
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+      const childKey = childSnapshot.key;
+      const childData = childSnapshot.val();
+      // ...
+      rowNum += 1; 
+      var row = "<tr><td>" + rowNum + "</td><td>" + childData.firstName + "</td><td>" + childData.lastName + "</td><td>" + childData.email + "</td></tr>"
+
+      $(row).appendTo('#dataTbl');
+      
+      });
+    }, {
+       onlyOnce: true
+    });
+
+
+  });
+</script>
