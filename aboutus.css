@@ -1,0 +1,168 @@
+.navbar {
+    background-color: rgb(0, 0, 0);
+    height: 60px;
+    width: 1284px;
+    position: relative;
+    bottom: 9px;
+    right: 12px;
+    overflow: hidden;
+}
+
+.head1 {
+    position: relative;
+    bottom: 55px;
+    color: aliceblue;
+    left: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+    height: 55px;
+    width: 55px;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+.navbtn {
+    display: flex;
+    column-gap: 2px;
+}
+
+.navmainbt {
+    margin-left: 780px;
+    position: relative;
+    bottom: 93px;
+}
+
+.bt1 {
+    width: 100px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.bt1:hover {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 2px;
+    height: 28px;
+}
+
+.bt2:hover {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 2px;
+    height: 28px;
+}
+
+.bt3:hover {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 2px;
+    height: 28px;
+}
+
+.bt4:hover {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 2px;
+    height: 28px;
+}
+
+.bt2 {
+    width: 100px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.bt3 {
+    width: 100px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.bt4 {
+    width: 100px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.fblogo {
+    width: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    bottom: 14px;
+}
+
+.aboutus {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.desc {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+}
+
+.memb {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.memb1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    /* margin-bottom: 1px; */
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    margin-top: 1%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    background-color: black;
+    color: aliceblue;
+    text-align: left;
+    height: 300px;
+    width: 1280px;
+    right: 1px;
+    position: absolute;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ques {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: 1%;
+}
